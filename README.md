@@ -269,29 +269,6 @@ npx playwright show-report
 - ✅ Functional correctness
 - ✅ Error handling
 
-## 🐛 Debugging
-
-### Enable Debug Mode
-
-```bash
-# Run with debug logs
-DEBUG=pw:api npm test
-
-# Run in debug mode with inspector
-npx playwright test --debug
-```
-
-### Inspect Selectors
-
-```bash
-npx playwright codegen https://community.cloud.automationanywhere.digital
-```
-
-### View Trace
-
-```bash
-npx playwright show-trace trace.zip
-```
 
 ## 📝 Important Notes
 
@@ -379,10 +356,5 @@ For issues or questions:
 3. Inspect application elements
 4. Verify API endpoints
 
-## 📄 License
-
-This project is for educational/testing purposes only.
-
----
 
 **Happy Testing! 🚀**
