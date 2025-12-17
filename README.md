@@ -163,47 +163,47 @@ npx playwright show-report
 
 ### Use Case 1: Message Box Task
 
-1. ✅ Validate login page elements
-2. ✅ Login to application
-3. ✅ Navigate to Automation menu
-4. ✅ Click Create dropdown
-5. ✅ Select Task Bot
-6. ✅ Fill mandatory details
-7. ✅ Search for Message Box in Actions
-8. ✅ Add Message Box via double-click
-9. ✅ Verify all UI elements in right panel
-10. ✅ Configure Message Box
-11. ✅ Save configuration
-12. ✅ Validate success message
+1. Validate login page elements
+2. Login to application
+3. Navigate to Automation menu
+4. Click Create dropdown
+5. Select Task Bot
+6. Fill mandatory details
+7. Search for Message Box in Actions
+8. Add Message Box via double-click
+9. Verify all UI elements in right panel
+10. Configure Message Box
+11. Save configuration
+12. Validate success message
 
 ### Use Case 2: Form with Upload
 
-1. ✅ Login to application
-2. ✅ Navigate to Automation menu
-3. ✅ Click Create dropdown
-4. ✅ Select Form
-5. ✅ Fill mandatory details
-6. ✅ Drag and drop Textbox to canvas
-7. ✅ Validate Textbox UI interactions
-8. ✅ Drag and drop Select File to canvas
-9. ✅ Validate File Upload UI interactions
-10. ✅ Enter text in textbox
-11. ✅ Upload document
-12. ✅ Save form
-13. ✅ Verify upload success
+1. Login to application
+2. Navigate to Automation menu
+3. Click Create dropdown
+4. Select Form
+5. Fill mandatory details
+6. Drag and drop Textbox to canvas
+7. Validate Textbox UI interactions
+8. Drag and drop Select File to canvas
+9. Validate File Upload UI interactions
+10. Enter text in textbox
+11. Upload document
+12. Save form
+13. Verify upload success
 
 ### Use Case 3: Learning Instance API
 
-1. ✅ Perform API login
-2. ✅ Navigate to Learning Instance (identify endpoints)
-3. ✅ Create instance via API
-4. ✅ Validate HTTP status code (200/201)
-5. ✅ Validate response time
-6. ✅ Validate response body schema
-7. ✅ Validate field-level data
-8. ✅ Verify functional accuracy
-9. ✅ Verify instance in UI
-10. ✅ Cleanup test data
+1. Perform API login
+2. Navigate to Learning Instance (identify endpoints)
+3. Create instance via API
+4. Validate HTTP status code (200/201)
+5. Validate response time
+6. Validate response body schema
+7. Validate field-level data
+8. Verify functional accuracy
+9. Verify instance in UI
+10. Cleanup test data
 
 ## 🎯 Assertions Covered
 
