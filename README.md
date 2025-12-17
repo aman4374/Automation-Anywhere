@@ -132,22 +132,6 @@ Key configurations:
 - Video: Retained on failure
 - Test timeout: 60 seconds
 
-### Updating Selectors
-
-**IMPORTANT**: Before running tests, you need to update CSS selectors based on actual application:
-
-1. Open Automation Anywhere in browser
-2. Open DevTools (F12)
-3. Inspect each element you need to interact with
-4. Update selectors in respective Page Object files
-
-Example locations to update:
-```typescript
-// In LoginPage.ts
-this.usernameInput = page.locator('ACTUAL_USERNAME_SELECTOR');
-this.passwordInput = page.locator('ACTUAL_PASSWORD_SELECTOR');
-this.loginButton = page.locator('ACTUAL_BUTTON_SELECTOR');
-```
 
 ## 🧪 Running Tests
 

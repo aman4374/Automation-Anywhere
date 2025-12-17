@@ -46,9 +46,6 @@ export class TaskBotPage extends BasePage {
 
     // Save and Run buttons
     this.saveButton = page.locator('button[name="save"]');
-    // ✅ FIXED: Using aria-label as provided
-    //this.runButton = page.locator('button[aria-label="Run"]');
-    // In constructor, replace the runButton line with:
     this.runButton = page.locator('button[aria-label="Run"], button[name="run"]').first();
     this.successMessage = page.locator('[class*="success"], [role="alert"]');
   }
