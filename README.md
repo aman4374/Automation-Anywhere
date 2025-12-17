@@ -230,9 +230,8 @@ npx playwright show-report
 ### Before First Run
 
 1. **Update Credentials**: Add your actual Automation Anywhere credentials to `.env`
-2. **Update Selectors**: Inspect the application and update all CSS selectors in Page Objects
-3. **Test File Path**: Ensure `sample-upload.txt` exists in `src/test-data/`
-4. **API Endpoints**: Use browser DevTools Network tab to identify actual API endpoints
+2. **Test File Path**: Ensure `sample-upload.txt` exists in `src/test-data/`
+3. **API Endpoints**: Use browser DevTools Network tab to identify actual API endpoints
 
 ### Finding API Endpoints (Use Case 3)
 
