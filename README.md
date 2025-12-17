@@ -151,24 +151,6 @@ this.loginButton = page.locator('ACTUAL_BUTTON_SELECTOR');
 
 ## 🧪 Running Tests
 
-### Run All Tests
-
-```bash
-npm test
-```
-
-### Run Tests in UI Mode (Recommended for Debugging)
-
-```bash
-npm run test:ui
-```
-
-### Run Tests in Headed Mode (See Browser)
-
-```bash
-npm run test:headed
-```
-
 ### Run Specific Use Case
 
 ```bash
@@ -182,17 +164,6 @@ npm run test:usecase2
 npm run test:usecase3
 ```
 
-### Run Specific Test File
-
-```bash
-npx playwright test usecase1-messagebox.spec.ts
-```
-
-### Run with Specific Browser
-
-```bash
-npx playwright test --project=chromium
-```
 
 ## 📊 View Test Reports
 
@@ -305,21 +276,6 @@ npx playwright show-report
 **Issue**: API tests fail
 - **Solution**: Verify API endpoints using Network tab
 
-## 🔧 Customization
-
-### Adding New Tests
-
-1. Create new spec file in `src/tests/`
-2. Import required Page Objects
-3. Write test cases with proper assertions
-4. Add npm script in `package.json`
-
-### Extending Page Objects
-
-1. Add new locators to respective Page class
-2. Create methods for new interactions
-3. Add validation methods
-4. Update tests to use new methods
 
 ## 📦 Dependencies
 
