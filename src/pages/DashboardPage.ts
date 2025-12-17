@@ -18,7 +18,7 @@ export class DashboardPage extends BasePage {
     this.automationMenu = page.locator('[name="automations"]');
     this.createDropdown = page.locator('button[name="createOptions"]').filter({ hasText: 'Create' });
     this.createTaskBotOption = page.locator('button[name="createTaskbot"]');
-    this.createFormOption = page.locator("text=Form"); // Update later when you find it
+    this.createFormOption = page.locator('button[name="create-attended-form"]'); // Update later when you find it
     this.aiTab = page.locator('[name="ai"]'); // Update later
     this.learningInstanceMenu = page.locator("text=Learning Instance"); // Update later
     this.botNameInput = page.locator('input[name="name"]');

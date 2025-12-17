@@ -18,30 +18,38 @@ export class FormPage extends BasePage {
   readonly uploadSuccessIndicator: Locator;
 
   constructor(page: Page) {
-    super(page);
-    this.formNameInput = page.locator('input[name="name"], input[placeholder*="name"]');
-    this.formDescriptionInput = page.locator('textarea[name="description"]');
-    this.createFormButton = page.locator('button:has-text("Create")');
-    this.textBoxElement = page.locator('div:has-text("Textbox"), [data-element="textbox"]').first();
-    this.selectFileElement = page.locator('div:has-text("Select File"), [data-element="file"]').first();
-    this.canvas = page.locator('[class*="form-canvas"], [data-testid="form-canvas"]');
-    this.textBoxOnCanvas = page.locator('[class*="textbox-component"]').first();
-    this.fileUploadOnCanvas = page.locator('[class*="file-component"]').first();
-    this.textBoxInput = page.locator('input[type="text"]').last();
-    this.fileUploadButton = page.locator('input[type="file"]');
-    this.fileInput = page.locator('input[type="file"]');
-    this.saveFormButton = page.locator('button:has-text("Save")');
-    this.uploadSuccessIndicator = page.locator('[class*="upload-success"], text=uploaded successfully');
-  }
+  super(page);
+  
+  // ✅ FIX: Use the same selector as TaskBotPage (they share the same form)
+  this.formNameInput = page.locator('input[name="name"]');
+  this.formDescriptionInput = page.locator('textarea[name="description"]');
+  this.createFormButton = page.locator('button[name="submit"]'); // ← CHANGED from button:has-text("Create")
+  
+  // Rest stays the same
+  this.textBoxElement = page.locator('div:has-text("Textbox"), [data-element="textbox"]').first();
+  this.selectFileElement = page.locator('div:has-text("Select File"), [data-element="file"]').first();
+  this.canvas = page.locator('[class*="form-canvas"], [data-testid="form-canvas"]');
+  this.textBoxOnCanvas = page.locator('[class*="textbox-component"]').first();
+  this.fileUploadOnCanvas = page.locator('[class*="file-component"]').first();
+  this.textBoxInput = page.locator('input[type="text"]').last();
+  this.fileUploadButton = page.locator('input[type="file"]');
+  this.fileInput = page.locator('input[type="file"]');
+  this.saveFormButton = page.locator('button:has-text("Save")');
+  this.uploadSuccessIndicator = page.locator('[class*="upload-success"], text=uploaded successfully');
+}
 
   async createForm(name: string, description: string) {
-    await this.fillInput(this.formNameInput, name);
-    if (await this.formDescriptionInput.isVisible()) {
-      await this.fillInput(this.formDescriptionInput, description);
-    }
-    await this.clickElement(this.createFormButton);
-    await this.waitForPageLoad();
+  await this.fillInput(this.formNameInput, name);
+  if (await this.formDescriptionInput.isVisible()) {
+    await this.fillInput(this.formDescriptionInput, description);
   }
+  await this.clickElement(this.createFormButton);
+  
+  // Wait for the form builder to load
+  await this.page.waitForLoadState('networkidle');
+  await this.page.waitForTimeout(2000);
+  console.log('✓ Form created, waiting for form builder to load');
+}
 
   async validateFormCreationElements() {
     await expect(this.formNameInput).toBeVisible();
